@@ -72,3 +72,63 @@ for(var i=0;i<odd.length;i++){
    odd[i].style.backgroundColor='green';
    even[i].style.backgroundColor='#f4f6';
 }
+//TRAVERSING THE DOM
+var itemList=document.querySelector('#items');
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor='#f4f4f4';
+// console.log(itemList.parentNode.parentNode.parentNode);
+// parentelement--------------------------------------------------------------------------
+// console.log(itemList.parentElement);
+// itemList.parentElement.style.backgroundColor='#f4f4f4';
+// console.log(itemList.parentElement.parentElement.parentElement);
+
+// Childnode-----------------------------------------------------------
+// console.log(itemList.childNodes);
+
+console.log(itemList.children);
+console.log(itemList.children[1]);
+itemList.children[1].style.backgroundColor='yellow'
+
+// firstchild--------------------------------------------------------------------
+console.log(itemList.firstChild)
+//firstelementchild---------------------------------------------------------------------------
+console.log(itemList.firstElementChild);
+itemList.firstElementChild.textContent='Punam';
+
+// lastchild--------------------------------------------------------------------
+console.log(itemList.lastChild)
+//lastelementchild---------------------------------------------------------------------------
+console.log(itemList.lastElementChild);
+itemList.lastElementChild.textContent='Raja';
+
+//nextSibling----------------------------------------------------------------------------------
+console.log(itemList.nextSibling);
+//nextElementSibling----------------------------------------------------------------------------------
+console.log(itemList.nextElementSibling);
+//previousSibling----------------------------------------------------------------------------------
+console.log(itemList.previousSibling);
+//previousElementSibling----------------------------------------------------------------------------------
+console.log(itemList.previousElementSibling);
+
+// createelement---------------------------------------------------------------------------------------
+//create a div
+var newDiv=document.createElement('div');
+//Add class
+newDiv.className='hello';
+//Add id
+newDiv.id='hello1';
+//add attr
+newDiv.setAttribute('title','hello Div');
+//create text node
+var newdivText=document.createTextNode('hello world');
+
+//add text to div
+newDiv.appendChild(newdivText);
+
+var container=document.querySelector('header.container');
+var h1=document.querySelector('header h1');
+
+console.log(newDiv)
+container.insertBefore(newDiv,h1);
+
+
